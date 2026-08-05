@@ -6,8 +6,89 @@
 // category options: "research" | "nanofab" | "hardware" | "manufacturing"
 const projectData = [
     {
+        id: "toiletpaper",
+        title: "Automated Toilet Paper Replacement System",
+        subtitle: "Junior Mechanical Engineering Capstone",
+        category: "hardware",
+        tags: [
+            "Mechanical Design",
+            "Arduino",
+            "Controls",
+            "3D Printing",
+            "Laser Cutting"
+        ],
+
+        teaser:
+            "Designed and prototyped an automated mechanism capable of replacing an empty toilet paper roll with a new roll in under five seconds.",
+
+        content: `
+            <p>
+            Designed and fabricated an automated toilet paper replacement system that ejects an empty roll and installs a new roll with the press of a button. The system completes a full replacement cycle in under five seconds and was designed to improve accessibility for users with limited dexterity while also demonstrating practical home automation concepts.
+            </p>
+
+            <h4>Mechanical Design</h4>
+
+            <ul>
+                <li>Designed the chassis using laser-cut plywood with a laser-cut clear acrylic enclosure.</li>
+                <li>Designed and 3D printed custom brackets and mechanisms for dispensing and positioning replacement rolls.</li>
+                <li>Integrated spray-finished housing for a professional prototype appearance.</li>
+            </ul>
+
+            <h4>Controls & Electronics</h4>
+
+            <ul>
+                <li>Programmed an Arduino Uno to coordinate the replacement sequence.</li>
+                <li>Integrated DC motors, a servo motor, and infrared sensors for automated positioning and roll detection.</li>
+                <li>Developed reliable control logic to synchronize dispensing, unloading, and installation operations.</li>
+            </ul>
+        `,
+        images:["toiletpaper1.jpg"],
+        links:{}
+    },
+    {
+        id: "microchannel",
+        title: "Microfluidic Channel Fabrication",
+        subtitle: "MEMS & Cleanroom Manufacturing",
+        category: "nanofab",
+
+        tags:[
+            "Photolithography",
+            "MEMS",
+            "Silicon Processing",
+            "Cleanroom"
+        ],
+
+        teaser:
+            "Fabricated silicon, silicon dioxide, and glass microfluidic channels using cleanroom microfabrication processes and experimentally characterized channel performance.",
+
+        content: `
+            <p>
+            Designed and fabricated three different microfluidic channel platforms including silicon, silicon dioxide, and glass devices using semiconductor processing techniques in the UCSB teaching cleanroom.
+            </p>
+
+            <h4>Fabrication Process</h4>
+
+            <ul>
+                <li>Performed thermal oxidation, contact photolithography, wet chemical etching, and wafer processing.</li>
+                <li>Calibrated etch times using profilometry to achieve target channel depths.</li>
+                <li>Verified channel dimensions using optical microscopy, profilometry, and spectrometry.</li>
+                <li>Operated Karl Suss contact aligners and multiple cleanroom metrology tools.</li>
+            </ul>
+
+            <h4>Experimental Validation</h4>
+
+            <ul>
+                <li>Characterized completed channels using electrical current monitoring with KCl electrolyte solutions.</li>
+                <li>Analyzed device performance and fabrication yield across multiple channel materials.</li>
+                <li>Generated extensive process characterization figures, fabrication documentation, and data analysis throughout development.</li>
+            </ul>
+        `,
+        images:["microfluidics1.jpg"],
+        links:{}
+    },
+    {
         id: "microfluidics",
-        title: "Polyelectrolyte Nanochannel Theoretical Simulations",
+        title: "Microfluidic Potential Modeling in Soft Nanochannels",
         subtitle: "UCSB Research Lab",
         category: "research",
         tags: ["MATLAB", "COMSOL", "Nanofluidics"],
@@ -96,7 +177,7 @@ const projectData = [
     },
     {
         id: "thermalval",
-        title: "Thermal Validation Test Fixture",
+        title: "High-Voltage Thermal Validation Fixture",
         subtitle: "Thermal Engineering",
         category: "hardware",
         tags: ["Creo Parametric", "Thermal Testing"],
@@ -207,7 +288,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initBackToTop();
     initProjectFilter();
     initModal();
-    initContactForm();
     initCounters();
 });
 
@@ -227,8 +307,14 @@ function renderProjectCards() {
 
         card.innerHTML = `
             <div class="card-image">
-                ${firstImage ? `<img data-src="${firstImage}" alt="${project.title}" loading="lazy">` : ""}
-                <div class="placeholder-icon">
+                    ${firstImage
+                        ? `<img data-src="${firstImage}" alt="${project.title}" loading="lazy">`
+                        : `
+                        <div class="placeholder-icon">
+                            <svg ...></svg>
+                            <span>Images under NDA</span>
+                        </div>`
+                    }
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
                     <span>${hasImage ? "" : "Images under NDA"}</span>
                 </div>
@@ -490,81 +576,6 @@ function closeModal() {
     document.body.style.overflow = "";
 }
 
-/* ---------- Contact Form Validation ---------- */
-function initContactForm() {
-    const form = document.getElementById("contact-form");
-    if (!form) return;
-
-    const fields = {
-        name: { input: document.getElementById("cf-name"), group: document.getElementById("group-name"), error: document.getElementById("err-name") },
-        email: { input: document.getElementById("cf-email"), group: document.getElementById("group-email"), error: document.getElementById("err-email") },
-        message: { input: document.getElementById("cf-message"), group: document.getElementById("group-message"), error: document.getElementById("err-message") }
-    };
-    const statusEl = document.getElementById("form-status");
-
-    function validate() {
-        let valid = true;
-
-        if (!fields.name.input.value.trim()) {
-            setError(fields.name, "Please enter your name.");
-            valid = false;
-        } else {
-            clearError(fields.name);
-        }
-
-        const emailVal = fields.email.input.value.trim();
-        const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailVal) {
-            setError(fields.email, "Please enter your email.");
-            valid = false;
-        } else if (!emailRe.test(emailVal)) {
-            setError(fields.email, "Please enter a valid email address.");
-            valid = false;
-        } else {
-            clearError(fields.email);
-        }
-
-        if (!fields.message.input.value.trim() || fields.message.input.value.trim().length < 10) {
-            setError(fields.message, "Message should be at least 10 characters.");
-            valid = false;
-        } else {
-            clearError(fields.message);
-        }
-
-        return valid;
-    }
-
-    function setError(field, msg) {
-        field.group.classList.add("error");
-        field.error.textContent = msg;
-    }
-    function clearError(field) {
-        field.group.classList.remove("error");
-        field.error.textContent = "";
-    }
-
-    Object.values(fields).forEach(f => {
-        f.input.addEventListener("blur", validate);
-        f.input.addEventListener("input", () => clearError(f));
-    });
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        statusEl.classList.remove("show", "success", "error");
-
-        if (!validate()) {
-            statusEl.textContent = "Please fix the errors above before sending.";
-            statusEl.classList.add("show", "error");
-            return;
-        }
-
-        // NOTE: No backend is wired up yet. Connect this to a service like
-        // Formspree, EmailJS, or a custom endpoint to actually send messages.
-        statusEl.textContent = "Message ready to send — connect a form backend (e.g. Formspree) to deliver it.";
-        statusEl.classList.add("show", "success");
-        form.reset();
-    });
-}
 
 /* ---------- Animated Counters ---------- */
 function initCounters() {
