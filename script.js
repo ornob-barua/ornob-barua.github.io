@@ -19,7 +19,7 @@ const projectData = [
         ],
 
         teaser:
-            "Designed and prototyped an automated mechanism capable of replacing an empty toilet paper roll with a new roll in under five seconds.",
+            "Designed and prototypated an automated mechanism capable of replacing an empty toilet paper roll with a new roll in under five seconds.",
 
         content: `
             <p>
@@ -42,7 +42,7 @@ const projectData = [
                 <li>Developed reliable control logic to synchronize dispensing, unloading, and installation operations.</li>
             </ul>
         `,
-        images:["toiletpaper1.jpg"],
+        images:["IMG_2349.jpg", "IMG_1159.mp4"],
         links:{}
     },
     {
@@ -83,7 +83,7 @@ const projectData = [
                 <li>Generated extensive process characterization figures, fabrication documentation, and data analysis throughout development.</li>
             </ul>
         `,
-        images:["microfluidics1.jpg"],
+        images:["IMG_2205.jpg", "IMG_2217.jpg", "IMG_2219.jpg", "IMG_2287.jpg", "IMG_2329.jpg"],
         links:{}
     },
     {
@@ -302,8 +302,9 @@ function renderProjectCards() {
         card.style.setProperty("--i", i);
         card.dataset.category = project.category;
 
-        const hasImage = project.images && project.images.length > 0;
-        const firstImage = hasImage ? IMAGE_BASE + project.images[0] : null;
+        const projectImages = Array.isArray(project.images) ? project.images.filter(file => !/\.mp4$/i.test(file)) : [];
+        const hasImage = projectImages.length > 0;
+        const firstImage = hasImage ? IMAGE_BASE + projectImages[0] : null;
 
         card.innerHTML = `
             <div class="card-image">
@@ -554,15 +555,28 @@ function openModal(project) {
     imageContainer.innerHTML = "";
 
     if (project.images && project.images.length > 0) {
-        project.images.forEach(imgFile => {
-            const img = document.createElement("img");
-            img.src = IMAGE_BASE + imgFile;
-            img.alt = `${project.title} image`;
-            img.loading = "lazy";
-            img.onerror = function () {
-                this.style.display = "none";
-            };
-            imageContainer.appendChild(img);
+        project.images.forEach(mediaFile => {
+            const isVideo = /\.mp4$/i.test(mediaFile);
+            const media = isVideo ? document.createElement("video") : document.createElement("img");
+
+            if (isVideo) {
+                media.src = IMAGE_BASE + mediaFile;
+                media.controls = true;
+                media.muted = true;
+                media.playsInline = true;
+                media.preload = "metadata";
+                media.style.width = "100%";
+                media.style.borderRadius = "12px";
+            } else {
+                media.src = IMAGE_BASE + mediaFile;
+                media.alt = `${project.title} image`;
+                media.loading = "lazy";
+                media.onerror = function () {
+                    this.style.display = "none";
+                };
+            }
+
+            imageContainer.appendChild(media);
         });
     }
 
