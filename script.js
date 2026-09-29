@@ -23,7 +23,7 @@ const projectData = [
 
         content: `
             <p>
-            Designed and fabricated an automated toilet paper replacement system that ejects an empty roll and installs a new roll with the press of a button. The system completes a full replacement cycle in under five seconds and was designed to improve accessibility for users with limited dexterity while also demonstrating practical home automation concepts.
+            Worked as part of a team to design and fabricate an automated toilet paper replacement system that ejects an empty roll and installs a new roll with the press of a button. The system completes a full replacement cycle in under five seconds and was designed to improve accessibility for users with limited dexterity while also demonstrating practical home automation concepts.
             </p>
 
             <h4>Mechanical Design</h4>
@@ -38,7 +38,7 @@ const projectData = [
 
             <ul>
                 <li>Programmed an Arduino Uno to coordinate the replacement sequence.</li>
-                <li>Integrated DC motors, a servo motor, and infrared sensors for automated positioning and roll detection.</li>
+                <li>Integrated one DC motor, a servo motor, and infrared sensors for automated positioning and roll detection.</li>
                 <li>Developed reliable control logic to synchronize dispensing, unloading, and installation operations.</li>
             </ul>
         `,
@@ -84,7 +84,47 @@ const projectData = [
             </ul>
         `,
         images:["IMG_2205.jpg", "IMG_2217.jpg", "IMG_2219.jpg", "IMG_2287.jpg", "IMG_2329.jpg"],
-        links:{}
+        links:{report: "Ornob Barua - ME141B Lab Report (2).pdf"}
+    },
+    {
+        id: "comsol-optimization",
+        title: "COMSOL Door Hook Shape Optimization",
+        subtitle: "ME 159 Final Project",
+        category: "research",
+        tags: ["COMSOL", "Shape Optimization", "Solid Mechanics", "PLA"],
+        teaser: "Optimized a 3D-printed PLA door hook to increase stiffness and limit deflection under its original failure load.",
+        content: `
+            <p>Used COMSOL's Shape Optimization of a Shell workflow to redesign the top portion of a 3D-printed PLA door hook that had plastically deformed under multiple jackets. The study modeled the hook as a shell and optimized its geometry to increase stiffness while limiting displacement and material usage.</p>
+            <h4>Analysis &amp; Optimization</h4>
+            <ul>
+                <li>Applied a 19.208 N load and limited maximum displacement to 0.7 cm.</li>
+                <li>Compared the optimized geometry against the original hook design using structural simulation.</li>
+                <li>Used shape changes and forming features to improve stiffness without significantly increasing material.</li>
+            </ul>
+            <p><a href="ME159_Final_Project.pdf" target="_blank" rel="noopener" class="report-link">Open the full ME 159 report</a></p>
+        `,
+        images: ["chart (9).jpg", "chart (7).jpg"],
+        links: {report: "ME159_Final_Project.pdf"}
+    },
+    {
+        id: "c-clamp-fea",
+        title: "C-Clamp FEA &amp; Topology Optimization",
+        subtitle: "ME 108 Project 2",
+        category: "research",
+        tags: ["FEA", "Topology Optimization", "SolidWorks", "Stress Analysis"],
+        teaser: "Analyzed a 6-inch ductile iron C-clamp and explored mass reduction while preserving the original factor of safety.",
+        content: `
+            <p>Studied the body of a 6-inch C-clamp using finite element analysis, with the goal of reducing mass while maintaining the original factor of safety. The project used a commercially available clamp as a baseline and simplified the threaded region to focus the analysis on the structural body.</p>
+            <h4>Analysis &amp; Optimization</h4>
+            <ul>
+                <li>Modeled loading and fixed constraints based on established C-clamp FEA methods.</li>
+                <li>Evaluated stress distribution in ductile cast iron under the clamp's rated load.</li>
+                <li>Used topology optimization to identify opportunities for material removal while preserving structural performance.</li>
+            </ul>
+            <p><a href="ME108 Project 2 - Written Report.pdf" target="_blank" rel="noopener" class="report-link">Open the full ME 108 report</a></p>
+        `,
+        images: ["ME108 Project 2 - Written Report (1)_edited.jpg", "ME108 Project 2 - Written Report (2).jpg"],
+        links: {report: "ME108 Project 2 - Written Report.pdf"}
     },
     {
         id: "microfluidics",
@@ -242,7 +282,7 @@ const projectData = [
 const skillsData = [
     {
         category: "Mechanical Design",
-        skills: ["GD&T", "DFM & Tolerancing", "Sheet Metal Design"]
+        skills: ["GD&T", "Tolerance Analysis", "DFM & Tolerancing", "Sheet Metal Design"]
     },
     {
         category: "CAD",
@@ -254,7 +294,7 @@ const skillsData = [
     },
     {
         category: "Simulation",
-        skills: ["COMSOL Multiphysics", "KLayout"]
+        skills: ["COMSOL Multiphysics", "Fusion 360 FEA", "SolidWorks FEA", "KLayout"]
     },
     {
         category: "Electronics",
@@ -262,7 +302,7 @@ const skillsData = [
     },
     {
         category: "Manufacturing",
-        skills: ["Cleanroom Manufacturing & Metrology", "SEM", "3D Printing", "Laser Cutting"]
+        skills: ["Cleanroom Manufacturing & Metrology", "CMM", "SEM", "3D Printing", "Laser Cutting"]
     },
     {
         category: "Professional / Soft Skills",
@@ -331,6 +371,7 @@ function renderProjectCards() {
                     <button class="btn-card primary view-details-btn">View Details</button>
                     ${project.links.github ? `<a href="${project.links.github}" target="_blank" rel="noopener" class="btn-card">GitHub</a>` : ""}
                     ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener" class="btn-card">Live Demo</a>` : ""}
+                    ${project.links.report ? `<a href="${project.links.report}" target="_blank" rel="noopener" class="btn-card">Open Report ↗</a>` : ""}
                 </div>
             </div>
         `;
