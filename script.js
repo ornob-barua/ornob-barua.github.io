@@ -3,6 +3,14 @@
    ========================================================================== */
 
 /* ---------- Project Data ---------- */
+// Each project has its own page at projects/<id>.html, which holds the full
+// write-up and photo gallery. This list only drives the cards on the home page
+// and the previous/next links at the bottom of each project page.
+//
+// To add a project:
+//   1. Add an entry below (thumbnail = image in assets/images/, or null).
+//   2. Copy any file in projects/ to projects/<id>.html and edit its text and images.
+//
 // category options: "research" | "nanofab" | "hardware" | "manufacturing"
 const projectData = [
     {
@@ -10,81 +18,18 @@ const projectData = [
         title: "Automated Toilet Paper Replacement System",
         subtitle: "Junior Mechanical Engineering Capstone",
         category: "hardware",
-        tags: [
-            "Mechanical Design",
-            "Arduino",
-            "Controls",
-            "3D Printing",
-            "Laser Cutting"
-        ],
-
-        teaser:
-            "Designed and prototypated an automated mechanism capable of replacing an empty toilet paper roll with a new roll in under five seconds.",
-
-        content: `
-            <p>
-            Worked as part of a team to design and fabricate an automated toilet paper replacement system that ejects an empty roll and installs a new roll with the press of a button. The system completes a full replacement cycle in under five seconds and was designed to improve accessibility for users with limited dexterity while also demonstrating practical home automation concepts.
-            </p>
-
-            <h4>Mechanical Design</h4>
-
-            <ul>
-                <li>Designed the chassis using laser-cut plywood with a laser-cut clear acrylic enclosure.</li>
-                <li>Designed and 3D printed custom brackets and mechanisms for dispensing and positioning replacement rolls.</li>
-                <li>Integrated spray-finished housing for a professional prototype appearance.</li>
-            </ul>
-
-            <h4>Controls & Electronics</h4>
-
-            <ul>
-                <li>Programmed an Arduino Uno to coordinate the replacement sequence.</li>
-                <li>Integrated one DC motor, a servo motor, and infrared sensors for automated positioning and roll detection.</li>
-                <li>Developed reliable control logic to synchronize dispensing, unloading, and installation operations.</li>
-            </ul>
-        `,
-        images:["IMG_2349.jpg", "IMG_1159.mp4"],
-        links:{}
+        tags: ["Mechanical Design", "Arduino", "Controls", "3D Printing", "Laser Cutting"],
+        teaser: "Designed and prototyped an automated mechanism capable of replacing an empty toilet paper roll with a new roll in under five seconds.",
+        thumbnail: "IMG_2349.jpg"
     },
     {
         id: "microchannel",
         title: "Microfluidic Channel Fabrication",
         subtitle: "MEMS & Cleanroom Manufacturing",
         category: "nanofab",
-
-        tags:[
-            "Photolithography",
-            "MEMS",
-            "Silicon Processing",
-            "Cleanroom"
-        ],
-
-        teaser:
-            "Fabricated silicon, silicon dioxide, and glass microfluidic channels using cleanroom microfabrication processes and experimentally characterized channel performance.",
-
-        content: `
-            <p>
-            Designed and fabricated three different microfluidic channel platforms including silicon, silicon dioxide, and glass devices using semiconductor processing techniques in the UCSB teaching cleanroom.
-            </p>
-
-            <h4>Fabrication Process</h4>
-
-            <ul>
-                <li>Performed thermal oxidation, contact photolithography, wet chemical etching, and wafer processing.</li>
-                <li>Calibrated etch times using profilometry to achieve target channel depths.</li>
-                <li>Verified channel dimensions using optical microscopy, profilometry, and spectrometry.</li>
-                <li>Operated Karl Suss contact aligners and multiple cleanroom metrology tools.</li>
-            </ul>
-
-            <h4>Experimental Validation</h4>
-
-            <ul>
-                <li>Characterized completed channels using electrical current monitoring with KCl electrolyte solutions.</li>
-                <li>Analyzed device performance and fabrication yield across multiple channel materials.</li>
-                <li>Generated extensive process characterization figures, fabrication documentation, and data analysis throughout development.</li>
-            </ul>
-        `,
-        images:["IMG_2205.jpg", "IMG_2217.jpg", "IMG_2219.jpg", "IMG_2287.jpg", "IMG_2329.jpg"],
-        links:{report: "Ornob Barua - ME141B Lab Report (2).pdf"}
+        tags: ["Photolithography", "MEMS", "Silicon Processing", "Cleanroom"],
+        teaser: "Fabricated silicon, silicon dioxide, and glass microfluidic channels using cleanroom microfabrication processes and experimentally characterized channel performance.",
+        thumbnail: "IMG_2205.jpg"
     },
     {
         id: "comsol-optimization",
@@ -93,18 +38,7 @@ const projectData = [
         category: "research",
         tags: ["COMSOL", "Shape Optimization", "Solid Mechanics", "PLA"],
         teaser: "Optimized a 3D-printed PLA door hook to increase stiffness and limit deflection under its original failure load.",
-        content: `
-            <p>Used COMSOL's Shape Optimization of a Shell workflow to redesign the top portion of a 3D-printed PLA door hook that had plastically deformed under multiple jackets. The study modeled the hook as a shell and optimized its geometry to increase stiffness while limiting displacement and material usage.</p>
-            <h4>Analysis &amp; Optimization</h4>
-            <ul>
-                <li>Applied a 19.208 N load and limited maximum displacement to 0.7 cm.</li>
-                <li>Compared the optimized geometry against the original hook design using structural simulation.</li>
-                <li>Used shape changes and forming features to improve stiffness without significantly increasing material.</li>
-            </ul>
-            <p><a href="ME159_Final_Project.pdf" target="_blank" rel="noopener" class="report-link">Open the full ME 159 report</a></p>
-        `,
-        images: ["chart (9).jpg", "chart (7).jpg"],
-        links: {report: "ME159_Final_Project.pdf"}
+        thumbnail: "chart (9).jpg"
     },
     {
         id: "c-clamp-fea",
@@ -113,18 +47,7 @@ const projectData = [
         category: "research",
         tags: ["FEA", "Topology Optimization", "SolidWorks", "Stress Analysis"],
         teaser: "Analyzed a 6-inch ductile iron C-clamp and explored mass reduction while preserving the original factor of safety.",
-        content: `
-            <p>Studied the body of a 6-inch C-clamp using finite element analysis, with the goal of reducing mass while maintaining the original factor of safety. The project used a commercially available clamp as a baseline and simplified the threaded region to focus the analysis on the structural body.</p>
-            <h4>Analysis &amp; Optimization</h4>
-            <ul>
-                <li>Modeled loading and fixed constraints based on established C-clamp FEA methods.</li>
-                <li>Evaluated stress distribution in ductile cast iron under the clamp's rated load.</li>
-                <li>Used topology optimization to identify opportunities for material removal while preserving structural performance.</li>
-            </ul>
-            <p><a href="ME108 Project 2 - Written Report.pdf" target="_blank" rel="noopener" class="report-link">Open the full ME 108 report</a></p>
-        `,
-        images: ["ME108 Project 2 - Written Report (1)_edited.jpg", "ME108 Project 2 - Written Report (2).jpg"],
-        links: {report: "ME108 Project 2 - Written Report.pdf"}
+        thumbnail: "ME108 Project 2 - Written Report (1)_edited.jpg"
     },
     {
         id: "microfluidics",
@@ -133,18 +56,7 @@ const projectData = [
         category: "research",
         tags: ["MATLAB", "COMSOL", "Nanofluidics"],
         teaser: "Theoretical modeling and numerical simulations of soft nanochannels under various polyelectrolytes.",
-        content: `
-            <p>Referenced theoretical research papers regarding soft nanochannels and boundary conditions within soft nanochannels to generate potential and velocity graphs with different polyelectrolytes.</p>
-            <h4>Next Steps & Ongoing Goals:</h4>
-            <ul>
-                <li>Create simulations for soft nanochannel with alginate.</li>
-                <li>Create simulations in COMSOL Multiphysics to validate theoretical data.</li>
-                <li>Fabricate nanochannels in the UCSB Nanofab facility and perform current monitoring experiments to correlate theoretical models with empirical data.</li>
-                <li>Publish research findings.</li>
-            </ul>
-        `,
-        images: ["PELpageimage.png"],
-        links: {}
+        thumbnail: "PELpageimage.png"
     },
     {
         id: "mlacal",
@@ -153,20 +65,7 @@ const projectData = [
         category: "nanofab",
         tags: ["KLayout", "Python", "SEM"],
         teaser: "Redesigned an MLA calibration pattern and workflow to eliminate photoresist buildup and standardize SEM evaluation.",
-        content: `
-            <p>Redesigned an MLA calibration pattern and workflow to eliminate photoresist buildup, improve SEM readability, and standardize calibration without subjective judgment calls.</p>
-            <h4>Problem Statement:</h4>
-            <p>The existing MLA calibration design was difficult to interpret at smaller feature sizes. Under optical microscopy, key features were hard to resolve, and stitching artifacts from the exposure process were present. Photoresist (PR) behavior introduced inconsistencies that made calibration unreliable.</p>
-            <h4>Analysis & Design Solution:</h4>
-            <ul>
-                <li><strong>Microscopy Analysis:</strong> Identified feature definition degradation and suspected fabrication failure modes at thinner bar dimensions.</li>
-                <li><strong>SEM Verification:</strong> Confirmed photoresist residue accumulating between horizontal/vertical bars as the root cause of measurement ambiguity.</li>
-                <li><strong>KLayout Pattern Generation:</strong> Used Python scripts in KLayout to build a modular pattern of horizontal and vertical bars optimized for quantitative SEM evaluation.</li>
-                <li><strong>Parametric Flexibility:</strong> The Python-driven workflow allows instant modifications to feature spacing without rebuilds.</li>
-            </ul>
-        `,
-        images: ["MLAcalimage1.png", "MLAcalimage2.jpg", "MLAcalimage3.png", "mlacalimage4.jpg", "mlacalimage5.jpg", "mlacalimage6.jpg"],
-        links: {}
+        thumbnail: "MLAcalimage1.png"
     },
     {
         id: "nanofab",
@@ -175,21 +74,7 @@ const projectData = [
         category: "nanofab",
         tags: ["ALD", "ICP-PECVD", "ASML DUV"],
         teaser: "Calibrated thin-film deposition (ALD, ICP-PECVD), fluorinated etching (FICP), and ASML DUV photolithography tools.",
-        content: `
-            <h4>ALD Calibration (Oxford Atomic Layer Deposition):</h4>
-            <p>Calibrated ALD deposition processes for Al₂O₃ and SiO₂ thin films by correlating cycle count with measured thickness using ellipsometry.</p>
-
-            <h4>Unaxis ICP-PECVD Calibration:</h4>
-            <p>Executed calibration runs for thin-film depositions of HDR SiO₂, LDR SiO₂, SiN, and Low Stress SiN. Measured pre/post particle counts, film stress, and thickness using Tencor Flexus, Filmetrics F50, and KLA Surfscan.</p>
-
-            <h4>FICP Etch Calibration (Fluorine ICP Etcher):</h4>
-            <p>Etched Si and SiO₂ patterns, measuring post-etch depth via step profilometer and analyzing sidewall profiles under SEM to maintain precise etch rates.</p>
-
-            <h4>ASML DUV Photolithography Calibration:</h4>
-            <p>Spun, baked, exposed, and developed test wafers. Used SEM metrology to inspect feature pitch and pillar width across wafer regions to ensure smooth operation for cleanroom users.</p>
-        `,
-        images: ["nanofabimage1.jpg", "nanofabimage2.jpg", "nanofabimage3.jpg", "nanofabimage4.png", "nanofabimage5.png"],
-        links: {}
+        thumbnail: "nanofabimage1.jpg"
     },
     {
         id: "sitest",
@@ -198,22 +83,7 @@ const projectData = [
         category: "hardware",
         tags: ["Creo Parametric", "TDR", "Sheet Metal"],
         teaser: "Designed a modular fixture holding Line and Fabric cards for easy TDR signal integrity testing.",
-        content: `
-            <h4>Objective:</h4>
-            <p>Create a fixture to secure two different Line/Fabric Cards for seamless signal integrity testing using Time-Domain Reflectometry (TDR).</p>
-            <h4>Key Features & Engineering Contribution:</h4>
-            <ul>
-                <li><strong>Elevated Structure:</strong> Designed a mini table capable of supporting heavy Line and Fabric card loads.</li>
-                <li><strong>Precision Mounts:</strong> Implemented brackets with press-fit alignment pins for quick card seating.</li>
-                <li><strong>Sliding PCB Mount:</strong> Integrated a bottom sliding mechanism for unrestricted access to all test connectors.</li>
-                <li><strong>Modular Architecture:</strong> Designed for debugging larger systems spanning multiple test fixtures.</li>
-                <li><strong>ESD Protection:</strong> 3D printed an ESD-safe handle for secure gripping during connector debugging.</li>
-                <li><strong>CAD & Drawings:</strong> Modeled components in Creo Parametric using Skeleton Modeling and sheet metal best practices; generated engineering drawings for manufacturing quotes.</li>
-            </ul>
-            <p><em>Note: Images omitted due to non-disclosure agreement (NDA).</em></p>
-        `,
-        images: [],
-        links: {}
+        thumbnail: null
     },
     {
         id: "thermalval",
@@ -222,20 +92,7 @@ const projectData = [
         category: "hardware",
         tags: ["Creo Parametric", "Thermal Testing"],
         teaser: "Heat-resistant fixture designed to hold power and return feeders during high-voltage (>100 V) thermal testing.",
-        content: `
-            <h4>Objective:</h4>
-            <p>Construct a heat-resistant fixture securing power and return feeders to validate system thermal behavior while delivering over 100 V.</p>
-            <h4>Design Execution:</h4>
-            <ul>
-                <li><strong>Busbar Shorting:</strong> Designed modified copper shorting blocks for power/return feeders.</li>
-                <li><strong>Structural Wooden Frame:</strong> Built custom-sized 2x4 framing to replicate physical spacing in actual production systems.</li>
-                <li><strong>Precision Isolation:</strong> Engineered a 3D-printed plastic divider ensuring a constant 4 mm gap between feeders.</li>
-                <li><strong>Creo Parametric CAD:</strong> Completed full assembly models and detailed manufacturing drawings.</li>
-            </ul>
-            <p><em>Note: Images omitted due to non-disclosure agreement (NDA).</em></p>
-        `,
-        images: [],
-        links: {}
+        thumbnail: null
     },
     {
         id: "shoeaging",
@@ -244,18 +101,7 @@ const projectData = [
         category: "hardware",
         tags: ["SolidWorks", "Arduino", "Controls"],
         teaser: "Automated mechanical wear rig simulating thousands of steps to accelerate footwear dynamic impact testing.",
-        content: `
-            <h4>System Architecture & Dynamic Mechanics:</h4>
-            <p>Designed a mechanical test rig using a concrete-coated spinning shaft and a weighted boom arm to replicate the dynamic skidding forces experienced during foot strikes.</p>
-            <h4>Key Subsystems:</h4>
-            <ul>
-                <li><strong>Chassis & Motor Mount:</strong> Modeled a custom bracket in SolidWorks, manufactured it in a machine shop, and bolted an induction motor to a leveled wooden chassis with shaft couplers.</li>
-                <li><strong>Sensing & Automation:</strong> Integrated a magnetic reed switch on the shaft to count rotation steps.</li>
-                <li><strong>Control Housing & Safety:</strong> Custom electrical enclosure holding display screen and motor controllers with an automated relay kill switch if motion stops for &gt;5 seconds.</li>
-            </ul>
-        `,
-        images: ["shoeagingimage1.jpg", "shoeagingimage2.jpg", "shoeagingimage3.jpg", "shoeagingimage4.jpg", "shoeagingimage5.jpg"],
-        links: {}
+        thumbnail: "shoeagingimage1.jpg"
     },
     {
         id: "airmotor",
@@ -264,17 +110,7 @@ const projectData = [
         category: "manufacturing",
         tags: ["CNC Mill", "Manual Lathe"],
         teaser: "Precision-machined air motor produced using manual lathes, CNC mills, and shop tooling at UCSB.",
-        content: `
-            <p>Precision-machined a complete pneumatic air motor in the UCSB Machine Shop based on technical engineering drawings.</p>
-            <h4>Manufacturing Processes:</h4>
-            <ul>
-                <li>Machined tight-tolerance cylindrical components on manual lathes and CNC mills.</li>
-                <li>Utilized drill presses, band saws, hand taps, and reamers for fine component finishing.</li>
-                <li>Assembled and bench-tested motor performance under low and high RPM pneumatic supply conditions.</li>
-            </ul>
-        `,
-        images: ["airmotorimage1.jpg", "airmotorimage2.jpg"],
-        links: {}
+        thumbnail: "airmotorimage1.jpg"
     }
 ];
 
@@ -327,38 +163,42 @@ document.addEventListener("DOMContentLoaded", () => {
     initRevealAnimations();
     initBackToTop();
     initProjectFilter();
-    initModal();
     initCounters();
+    initProjectPager();
+    initLightbox();
 });
 
 /* ---------- Render Project Cards ---------- */
+const CATEGORY_LABELS = {
+    research: "Research",
+    nanofab: "Nanofabrication",
+    hardware: "Hardware & Fixtures",
+    manufacturing: "Manufacturing"
+};
+
 function renderProjectCards() {
     const gridContainer = document.getElementById("project-grid");
     if (!gridContainer) return;
 
     projectData.forEach((project, i) => {
-        const card = document.createElement("div");
+        const card = document.createElement("a");
         card.className = "card";
+        card.href = `projects/${project.id}.html`;
         card.style.setProperty("--i", i);
         card.dataset.category = project.category;
 
-        const projectImages = Array.isArray(project.images) ? project.images.filter(file => !/\.mp4$/i.test(file)) : [];
-        const hasImage = projectImages.length > 0;
-        const firstImage = hasImage ? IMAGE_BASE + projectImages[0] : null;
+        const thumb = project.thumbnail ? IMAGE_BASE + encodeURI(project.thumbnail) : null;
 
         card.innerHTML = `
             <div class="card-image">
-                    ${firstImage
-                        ? `<img data-src="${firstImage}" alt="${project.title}" loading="lazy">`
-                        : `
-                        <div class="placeholder-icon">
-                            <svg ...></svg>
-                            <span>Images under NDA</span>
-                        </div>`
-                    }
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-                    <span>${hasImage ? "" : "Images under NDA"}</span>
-                </div>
+                ${thumb
+                    ? `<img data-src="${thumb}" alt="${project.title}" loading="lazy">`
+                    : `<div class="placeholder-icon">
+                           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                           <span>Images under NDA</span>
+                       </div>`
+                }
+                <span class="card-category">${CATEGORY_LABELS[project.category] || project.category}</span>
             </div>
             <div class="card-body">
                 <div class="subtitle">${project.subtitle}</div>
@@ -367,16 +207,10 @@ function renderProjectCards() {
                 <div class="card-tags">
                     ${project.tags.map(t => `<span class="tech-tag">${t}</span>`).join("")}
                 </div>
-                <div class="card-actions">
-                    <button class="btn-card primary view-details-btn">View Details</button>
-                    ${project.links.github ? `<a href="${project.links.github}" target="_blank" rel="noopener" class="btn-card">GitHub</a>` : ""}
-                    ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" rel="noopener" class="btn-card">Live Demo</a>` : ""}
-                    ${project.links.report ? `<a href="${project.links.report}" target="_blank" rel="noopener" class="btn-card">Open Report ↗</a>` : ""}
-                </div>
+                <span class="card-link">View project <span aria-hidden="true">→</span></span>
             </div>
         `;
 
-        card.querySelector(".view-details-btn").addEventListener("click", () => openModal(project));
         gridContainer.appendChild(card);
     });
 
@@ -571,66 +405,65 @@ function initProjectFilter() {
     });
 }
 
-/* ---------- Modal ---------- */
-function initModal() {
-    const modal = document.getElementById("project-modal");
-    const closeBtn = document.querySelector(".close-btn");
-    if (!modal || !closeBtn) return;
+/* ---------- Project Page: Previous / Next ---------- */
+function initProjectPager() {
+    const pager = document.getElementById("project-pager");
+    const currentId = document.body.dataset.project;
+    if (!pager || !currentId) return;
 
-    closeBtn.addEventListener("click", closeModal);
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) closeModal();
+    const idx = projectData.findIndex(p => p.id === currentId);
+    if (idx === -1) return;
+
+    const prev = projectData[(idx - 1 + projectData.length) % projectData.length];
+    const next = projectData[(idx + 1) % projectData.length];
+
+    pager.innerHTML = `
+        <a href="${prev.id}.html" class="pager-link prev">
+            <span class="pager-label">← Previous</span>
+            <span class="pager-title">${prev.title}</span>
+        </a>
+        <a href="${next.id}.html" class="pager-link next">
+            <span class="pager-label">Next →</span>
+            <span class="pager-title">${next.title}</span>
+        </a>
+    `;
+}
+
+/* ---------- Project Page: Image Lightbox ---------- */
+function initLightbox() {
+    const images = document.querySelectorAll(".project-gallery img");
+    if (!images.length) return;
+
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.innerHTML = `
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img alt="">
+    `;
+    document.body.appendChild(box);
+    const boxImg = box.querySelector("img");
+
+    const close = () => {
+        box.classList.remove("open");
+        document.body.style.overflow = "";
+    };
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            boxImg.src = img.src;
+            boxImg.alt = img.alt;
+            box.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    box.addEventListener("click", (e) => {
+        if (e.target !== boxImg) close();
     });
     document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+        if (e.key === "Escape" && box.classList.contains("open")) close();
     });
 }
-
-function openModal(project) {
-    const modal = document.getElementById("project-modal");
-    document.getElementById("modal-title").innerText = project.title;
-    document.getElementById("modal-subtitle").innerText = project.subtitle;
-    document.getElementById("modal-description").innerHTML = project.content;
-
-    const imageContainer = document.getElementById("modal-images");
-    imageContainer.innerHTML = "";
-
-    if (project.images && project.images.length > 0) {
-        project.images.forEach(mediaFile => {
-            const isVideo = /\.mp4$/i.test(mediaFile);
-            const media = isVideo ? document.createElement("video") : document.createElement("img");
-
-            if (isVideo) {
-                media.src = IMAGE_BASE + mediaFile;
-                media.controls = true;
-                media.muted = true;
-                media.playsInline = true;
-                media.preload = "metadata";
-                media.style.width = "100%";
-                media.style.borderRadius = "12px";
-            } else {
-                media.src = IMAGE_BASE + mediaFile;
-                media.alt = `${project.title} image`;
-                media.loading = "lazy";
-                media.onerror = function () {
-                    this.style.display = "none";
-                };
-            }
-
-            imageContainer.appendChild(media);
-        });
-    }
-
-    modal.classList.add("open");
-    document.body.style.overflow = "hidden";
-}
-
-function closeModal() {
-    const modal = document.getElementById("project-modal");
-    modal.classList.remove("open");
-    document.body.style.overflow = "";
-}
-
 
 /* ---------- Animated Counters ---------- */
 function initCounters() {

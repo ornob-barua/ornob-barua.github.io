@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLA Calibration Design and Traveler | Ornob Barua</title>
+    <meta name="description" content="Redesigned an MLA calibration pattern and workflow to eliminate photoresist buildup and standardize SEM evaluation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-page" data-project="mlacal">
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="../index.html#home" class="nav-brand"><span class="brand-mark"></span> Ornob Barua</a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="../index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="../index.html#resume" class="nav-link">Resume</a></li>
+                <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <a href="../Ornob_Resume.pdf" class="btn-resume-nav" target="_blank" rel="noopener">Resume ↗</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project Header -->
+        <header class="project-hero">
+            <div class="blueprint-grid"></div>
+            <div class="container">
+                <a href="../index.html#projects" class="back-link">← All Projects</a>
+                <div class="eyebrow">UCSB Nanofabrication Facility</div>
+                <h1>MLA Calibration Design and Traveler</h1>
+                <p class="project-lead">Redesigned an MLA calibration pattern and workflow to eliminate photoresist buildup and standardize SEM evaluation.</p>
+            </div>
+        </header>
+
+        <!-- Project Write-up -->
+        <section class="project-section">
+            <div class="container project-layout">
+                <article class="project-body">
+                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
+                <p>Redesigned an MLA calibration pattern and workflow to eliminate photoresist buildup, improve SEM readability, and standardize calibration without subjective judgment calls.</p>
+                <h4>Problem Statement:</h4>
+                <p>The existing MLA calibration design was difficult to interpret at smaller feature sizes. Under optical microscopy, key features were hard to resolve, and stitching artifacts from the exposure process were present. Photoresist (PR) behavior introduced inconsistencies that made calibration unreliable.</p>
+                <h4>Analysis & Design Solution:</h4>
+                <ul>
+                    <li><strong>Microscopy Analysis:</strong> Identified feature definition degradation and suspected fabrication failure modes at thinner bar dimensions.</li>
+                    <li><strong>SEM Verification:</strong> Confirmed photoresist residue accumulating between horizontal/vertical bars as the root cause of measurement ambiguity.</li>
+                    <li><strong>KLayout Pattern Generation:</strong> Used Python scripts in KLayout to build a modular pattern of horizontal and vertical bars optimized for quantitative SEM evaluation.</li>
+                    <li><strong>Parametric Flexibility:</strong> The Python-driven workflow allows instant modifications to feature spacing without rebuilds.</li>
+                </ul>
+                </article>
+
+                <aside class="project-aside">
+                    <div class="aside-card">
+                        <h3>Project Info</h3>
+                        <dl>
+                            <dt>Category</dt>
+                            <dd>Nanofabrication</dd>
+                            <dt>Context</dt>
+                            <dd>UCSB Nanofabrication Facility</dd>
+                        </dl>
+                        <h3>Tools &amp; Methods</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">KLayout</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SEM</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="project-section gallery-section">
+            <div class="container">
+                <div class="eyebrow">Gallery</div>
+                <h2>Photos &amp; Media</h2>
+                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
+                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
+                <div class="project-gallery">
+                    <figure class="gallery-item">
+                        <img src="../assets/images/MLAcalimage1.png" alt="MLA Calibration Design and Traveler — image 1" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/MLAcalimage2.jpg" alt="MLA Calibration Design and Traveler — image 2" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/MLAcalimage3.png" alt="MLA Calibration Design and Traveler — image 3" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/mlacalimage4.jpg" alt="MLA Calibration Design and Traveler — image 4" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/mlacalimage5.jpg" alt="MLA Calibration Design and Traveler — image 5" loading="lazy">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="../assets/images/mlacalimage6.jpg" alt="MLA Calibration Design and Traveler — image 6" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous / Next links are filled in by script.js -->
+        <nav class="project-pager container" id="project-pager" aria-label="More projects"></nav>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 Ornob Mutsuddy Barua. Built for GitHub Pages.</p>
+            <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            </button>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
