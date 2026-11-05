@@ -58,12 +58,22 @@
             <div class="container project-layout">
                 <article class="project-body">
                 <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <p>Used COMSOL's Shape Optimization of a Shell workflow to redesign the top portion of a 3D-printed PLA door hook that had plastically deformed under multiple jackets. The study modeled the hook as a shell and optimized its geometry to increase stiffness while limiting displacement and material usage.</p>
-                <h4>Analysis &amp; Optimization</h4>
+                <h4>Problem</h4>
+                <p>A 3D-printed PLA door hook plastically deformed and became unusable after supporting multiple jackets. The goal was to redesign the top of the hook, the section that interacts with the door, to increase stiffness without significantly increasing material usage.</p>
+
+                <h4>Method</h4>
                 <ul>
-                    <li>Applied a 19.208 N load and limited maximum displacement to 0.7 cm.</li>
-                    <li>Compared the optimized geometry against the original hook design using structural simulation.</li>
-                    <li>Used shape changes and forming features to improve stiffness without significantly increasing material.</li>
+                    <li>Used COMSOL's Shape Optimization of a Shell workflow as a guide, modeling the top of the hook as a 3 cm by 3 cm PLA shell with a 4 mm thickness.</li>
+                    <li>Applied a 19.208 N worst-case load, based on the weight of five 490 g jackets, with a maximum displacement limit of 0.7 cm.</li>
+                    <li>Ran the optimization with an MMA solver to minimize total elastic strain energy.</li>
+                    <li>Compared the optimized geometry against the original design using a stationary structural study.</li>
+                </ul>
+
+                <h4>Results</h4>
+                <ul>
+                    <li>The optimizer introduced bends and forming features that move material away from the center of the shell to increase stiffness.</li>
+                    <li>Re-running the stationary study showed significantly lower stress across the hook, with some hot spots remaining along the symmetry edge.</li>
+                    <li>These are simulation results. The next step is to apply these forms to a new printed hook.</li>
                 </ul>
                 </article>
 

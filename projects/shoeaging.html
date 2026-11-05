@@ -58,13 +58,21 @@
             <div class="container project-layout">
                 <article class="project-body">
                 <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>System Architecture & Dynamic Mechanics:</h4>
+                <h4>Problem</h4>
+                <p>Aging a shoe through real wear takes thousands of steps. Footwear dynamic impact testing needed an automated way to accelerate that wear and reliably quantify how much a shoe had aged.</p>
+
+                <h4>Method</h4>
                 <p>Designed a mechanical test rig using a concrete-coated spinning shaft and a weighted boom arm to replicate the dynamic skidding forces experienced during foot strikes.</p>
-                <h4>Key Subsystems:</h4>
                 <ul>
-                    <li><strong>Chassis & Motor Mount:</strong> Modeled a custom bracket in SolidWorks, manufactured it in a machine shop, and bolted an induction motor to a leveled wooden chassis with shaft couplers.</li>
-                    <li><strong>Sensing & Automation:</strong> Integrated a magnetic reed switch on the shaft to count rotation steps.</li>
-                    <li><strong>Control Housing & Safety:</strong> Custom electrical enclosure holding display screen and motor controllers with an automated relay kill switch if motion stops for &gt;5 seconds.</li>
+                    <li><strong>Chassis &amp; Motor Mount:</strong> Modeled a custom bracket in SolidWorks, manufactured it in a machine shop, and bolted an induction motor to a leveled wooden chassis with shaft couplers.</li>
+                    <li><strong>Sensing &amp; Automation:</strong> Integrated a magnetic reed switch on the shaft with an Arduino Nano to count rotation steps.</li>
+                    <li><strong>Control Housing &amp; Safety:</strong> Built a custom electrical enclosure holding the display screen and motor controllers, with an automated relay kill switch if motion stops for &gt;5 seconds.</li>
+                </ul>
+
+                <h4>Results</h4>
+                <ul>
+                    <li>The machine has run for over 5 million cycles on 20+ shoes.</li>
+                    <li>The reed switch sensor quantifies aging by counting rotation steps, and the relay kill switch stops the rig automatically if motion stalls.</li>
                 </ul>
                 </article>
 

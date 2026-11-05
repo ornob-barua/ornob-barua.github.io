@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C-Clamp FEA &amp; Topology Optimization | Ornob Barua</title>
-    <meta name="description" content="Analyzed a 6-inch ductile iron C-clamp and explored mass reduction while preserving the original factor of safety.">
+    <meta name="description" content="Reduced the mass of a 6-inch ductile iron C-clamp by 12.7% while increasing its factor of safety from 1.282 to 1.329.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
@@ -49,7 +49,7 @@
                 <a href="../index.html#projects" class="back-link">← All Projects</a>
                 <div class="eyebrow">ME 108 Project 2</div>
                 <h1>C-Clamp FEA &amp; Topology Optimization</h1>
-                <p class="project-lead">Analyzed a 6-inch ductile iron C-clamp and explored mass reduction while preserving the original factor of safety.</p>
+                <p class="project-lead">Reduced the mass of a 6-inch ductile iron C-clamp by 12.7% while increasing its factor of safety from 1.282 to 1.329.</p>
             </div>
         </header>
 
@@ -58,12 +58,23 @@
             <div class="container project-layout">
                 <article class="project-body">
                 <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <p>Studied the body of a 6-inch C-clamp using finite element analysis, with the goal of reducing mass while maintaining the original factor of safety. The project used a commercially available clamp as a baseline and simplified the threaded region to focus the analysis on the structural body.</p>
-                <h4>Analysis &amp; Optimization</h4>
+                <h4>Problem</h4>
+                <p>C-clamps are often heavy, with a very robust body. Removing mass can improve ergonomics and reduce material cost, but the clamp still has to carry its rated load. Working with Camden Smith, the goal was to minimize the mass of a 6-inch C-clamp body while maintaining at least its original factor of safety.</p>
+
+                <h4>Method</h4>
                 <ul>
-                    <li>Modeled loading and fixed constraints based on established C-clamp FEA methods.</li>
-                    <li>Evaluated stress distribution in ductile cast iron under the clamp's rated load.</li>
-                    <li>Used topology optimization to identify opportunities for material removal while preserving structural performance.</li>
+                    <li>Used a commercially available ductile cast iron clamp (McMaster-Carr 5033A5) as the baseline, removing the screw and handle to focus on the structural body.</li>
+                    <li>Simplified the threaded region to a cylindrical cut and applied the 2,400 lb (10,675 N) rated load, using loading and fixed constraints based on established C-clamp FEA methods.</li>
+                    <li>Ran a static study in SolidWorks to establish a baseline factor of safety of 1.282.</li>
+                    <li>Ran two iterations of topology optimization to identify where material could be removed, then redesigned the body and re-ran the static study.</li>
+                </ul>
+
+                <h4>Results</h4>
+                <ul>
+                    <li>Reduced body mass from 2.44 lb to 2.13 lb, a 12.7% reduction.</li>
+                    <li>Increased the factor of safety from 1.282 to 1.329, satisfying the constraint.</li>
+                    <li>Reduced the mass of the middle grip section by 25.8%, from 0.93 lb to 0.69 lb.</li>
+                    <li>These are simulation results. Proposed next steps are an FEA study of hand grip pressure on the handle and physical load testing of a machined clamp.</li>
                 </ul>
                 </article>
 

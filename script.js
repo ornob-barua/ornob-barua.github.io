@@ -12,7 +12,48 @@
 //   2. Copy any file in projects/ to projects/<id>.html and edit its text and images.
 //
 // category options: "research" | "nanofab" | "hardware" | "manufacturing"
+// inProgress: true shows a "Details coming soon" card image instead of "Images under NDA".
 const projectData = [
+    {
+        id: "tirf-microscopy",
+        title: "TIRF Microscopy Optical Setup",
+        subtitle: "Current Project",
+        category: "research",
+        tags: ["TIRF Microscopy", "Optics"],
+        teaser: "I'm currently working on this page. More details coming soon.",
+        thumbnail: null,
+        inProgress: true
+    },
+    {
+        id: "walking-device-capstone",
+        title: "Discreet Assistive Device",
+        subtitle: "Capstone Project | Team Lead",
+        category: "hardware",
+        tags: ["Capstone", "Assistive Device"],
+        teaser: "I'm currently working on this page. More details coming soon.",
+        thumbnail: null,
+        inProgress: true
+    },
+    {
+        id: "asml-cmm-alignment",
+        title: "ASML CMM to Optical Alignment Workflow",
+        subtitle: "ASML",
+        category: "manufacturing",
+        tags: ["CMM", "Optical Alignment"],
+        teaser: "I'm currently working on this page. More details coming soon.",
+        thumbnail: null,
+        inProgress: true
+    },
+    {
+        id: "asml-tilt-stackup",
+        title: "ASML Tilt Tolerance Alignment Stack-Up Analysis",
+        subtitle: "ASML",
+        category: "manufacturing",
+        tags: ["Tolerance Analysis", "Optical Alignment"],
+        teaser: "I'm currently working on this page. More details coming soon.",
+        thumbnail: null,
+        inProgress: true
+    },
     {
         id: "toiletpaper",
         title: "Automated Toilet Paper Replacement System",
@@ -28,7 +69,7 @@ const projectData = [
         subtitle: "MEMS & Cleanroom Manufacturing",
         category: "nanofab",
         tags: ["Photolithography", "MEMS", "Silicon Processing", "Cleanroom"],
-        teaser: "Fabricated silicon, silicon dioxide, and glass microfluidic channels using cleanroom microfabrication processes and experimentally characterized channel performance.",
+        teaser: "Fabricated SiO₂, glass, and PDMS microfluidic channels using cleanroom microfabrication processes and experimentally characterized channel performance.",
         thumbnail: "IMG_2205.jpg"
     },
     {
@@ -46,7 +87,7 @@ const projectData = [
         subtitle: "ME 108 Project 2",
         category: "research",
         tags: ["FEA", "Topology Optimization", "SolidWorks", "Stress Analysis"],
-        teaser: "Analyzed a 6-inch ductile iron C-clamp and explored mass reduction while preserving the original factor of safety.",
+        teaser: "Reduced the mass of a 6-inch ductile iron C-clamp by 12.7% while increasing its factor of safety from 1.282 to 1.329.",
         thumbnail: "ME108 Project 2 - Written Report (1)_edited.jpg"
     },
     {
@@ -193,6 +234,11 @@ function renderProjectCards() {
             <div class="card-image">
                 ${thumb
                     ? `<img data-src="${thumb}" alt="${project.title}" loading="lazy">`
+                    : project.inProgress
+                    ? `<div class="placeholder-icon">
+                           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                           <span>Details coming soon</span>
+                       </div>`
                     : `<div class="placeholder-icon">
                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                            <span>Images under NDA</span>
