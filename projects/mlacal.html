@@ -57,23 +57,58 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>The existing MLA calibration design was difficult to interpret at smaller feature sizes. Under optical microscopy, key features were hard to resolve, and stitching artifacts from the exposure process were present. Photoresist (PR) behavior introduced inconsistencies that made calibration unreliable.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>The old MLA calibration pattern was hard to read at small feature sizes. Stitching artifacts and photoresist buildup made calibration unreliable.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/MLAcalimage1.png" alt="MLA Calibration Design and Traveler — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <ul>
-                    <li><strong>Microscopy Analysis:</strong> Identified feature definition degradation and suspected fabrication failure modes at thinner bar dimensions.</li>
-                    <li><strong>SEM Verification:</strong> Confirmed photoresist residue accumulating between horizontal/vertical bars as the root cause of measurement ambiguity.</li>
-                    <li><strong>KLayout Pattern Generation:</strong> Used Python scripts in KLayout to build a modular pattern of horizontal and vertical bars optimized for quantitative SEM evaluation.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Used SEM to confirm photoresist residue between the bars as the root cause.</li>
+                            <li>Wrote Python scripts in KLayout to generate a new modular bar pattern built for SEM evaluation.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/MLAcalimage2.jpg" alt="MLA Calibration Design and Traveler — image 2" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/MLAcalimage3.png" alt="MLA Calibration Design and Traveler — image 3" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>Delivered a redesigned pattern and workflow to eliminate photoresist buildup, improve SEM readability, and standardize calibration without subjective judgment calls.</li>
-                    <li>The Python-driven workflow allows instant modifications to feature spacing without rebuilds.</li>
-                    <li>Created a traveler to guide new interns through the calibration process.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <ul>
+                            <li>Designed the new pattern to avoid photoresist buildup and standardize calibration without subjective judgment calls.</li>
+                            <li>Feature spacing can be changed instantly in the script, with no rebuild.</li>
+                            <li>Wrote a traveler to guide new interns through the calibration.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/mlacalimage4.jpg" alt="MLA Calibration Design and Traveler — image 4" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/mlacalimage5.jpg" alt="MLA Calibration Design and Traveler — image 5" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/mlacalimage6.jpg" alt="MLA Calibration Design and Traveler — image 6" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -93,36 +128,6 @@
                         </div>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/MLAcalimage1.png" alt="MLA Calibration Design and Traveler — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/MLAcalimage2.jpg" alt="MLA Calibration Design and Traveler — image 2" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/MLAcalimage3.png" alt="MLA Calibration Design and Traveler — image 3" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/mlacalimage4.jpg" alt="MLA Calibration Design and Traveler — image 4" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/mlacalimage5.jpg" alt="MLA Calibration Design and Traveler — image 5" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/mlacalimage6.jpg" alt="MLA Calibration Design and Traveler — image 6" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 

@@ -13,6 +13,7 @@
 //
 // category options: "research" | "nanofab" | "hardware" | "manufacturing"
 // inProgress: true shows a "Details coming soon" card image instead of "Images under NDA".
+// logo: true shows the thumbnail whole on a white panel (for company logos) instead of cropping it.
 const projectData = [
     {
         id: "tirf-microscopy",
@@ -36,23 +37,23 @@ const projectData = [
     },
     {
         id: "asml-cmm-alignment",
-        title: "ASML CMM to Optical Alignment Workflow",
+        title: "CMM-Based Optical Alignment Characterization",
         subtitle: "ASML",
         category: "manufacturing",
-        tags: ["CMM", "Optical Alignment"],
-        teaser: "I'm currently working on this page. More details coming soon.",
-        thumbnail: null,
-        inProgress: true
+        tags: ["CMM", "MATLAB", "GD&T", "Optical Alignment"],
+        teaser: "Used a portable CMM and MATLAB to turn raw measurements into optical alignment metrics and isolate sources of tilt.",
+        thumbnail: "asml-logo.svg",
+        logo: true
     },
     {
         id: "asml-tilt-stackup",
         title: "ASML Tilt Tolerance Alignment Stack-Up Analysis",
         subtitle: "ASML",
         category: "manufacturing",
-        tags: ["Tolerance Analysis", "Optical Alignment"],
-        teaser: "I'm currently working on this page. More details coming soon.",
-        thumbnail: null,
-        inProgress: true
+        tags: ["Tolerance Analysis", "GD&T", "Excel", "Optical Alignment"],
+        teaser: "Built a worst-case tilt tolerance stack-up to find why a supplier-built optical assembly kept failing its alignment specification.",
+        thumbnail: "asml-logo.svg",
+        logo: true
     },
     {
         id: "toiletpaper",
@@ -124,7 +125,8 @@ const projectData = [
         category: "hardware",
         tags: ["Creo Parametric", "TDR", "Sheet Metal"],
         teaser: "Designed a modular fixture holding Line and Fabric cards for easy TDR signal integrity testing.",
-        thumbnail: null
+        thumbnail: "arista-logo.svg",
+        logo: true
     },
     {
         id: "thermalval",
@@ -133,7 +135,8 @@ const projectData = [
         category: "hardware",
         tags: ["Creo Parametric", "Thermal Testing"],
         teaser: "Heat-resistant fixture designed to hold power and return feeders during high-voltage (>100 V) thermal testing.",
-        thumbnail: null
+        thumbnail: "arista-logo.svg",
+        logo: true
     },
     {
         id: "shoeaging",
@@ -233,7 +236,7 @@ function renderProjectCards() {
         card.innerHTML = `
             <div class="card-image">
                 ${thumb
-                    ? `<img data-src="${thumb}" alt="${project.title}" loading="lazy">`
+                    ? `<img data-src="${thumb}" alt="${project.title}" loading="lazy"${project.logo ? ' class="is-logo"' : ""}>`
                     : project.inProgress
                     ? `<div class="placeholder-icon">
                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -477,7 +480,7 @@ function initProjectPager() {
 
 /* ---------- Project Page: Image Lightbox ---------- */
 function initLightbox() {
-    const images = document.querySelectorAll(".project-gallery img");
+    const images = document.querySelectorAll(".project-gallery img, .project-media img");
     if (!images.length) return;
 
     const box = document.createElement("div");

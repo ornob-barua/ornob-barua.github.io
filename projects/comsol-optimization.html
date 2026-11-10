@@ -57,24 +57,45 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>A 3D-printed PLA door hook plastically deformed and became unusable after supporting multiple jackets. The goal was to redesign the top of the hook, the section that interacts with the door, to increase stiffness without significantly increasing material usage.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>A 3D-printed PLA door hook bent permanently under several jackets. The goal was to make the top of the hook stiffer without adding much material.</p>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <ul>
-                    <li>Used COMSOL's Shape Optimization of a Shell workflow as a guide, modeling the top of the hook as a 3 cm by 3 cm PLA shell with a 4 mm thickness.</li>
-                    <li>Applied a 19.208 N worst-case load, based on the weight of five 490 g jackets, with a maximum displacement limit of 0.7 cm.</li>
-                    <li>Ran the optimization with an MMA solver to minimize total elastic strain energy.</li>
-                    <li>Compared the optimized geometry against the original design using a stationary structural study.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Modeled the top of the hook in COMSOL as a 3 cm × 3 cm PLA shell, 4 mm thick.</li>
+                            <li>Applied a 19.208 N worst-case load (five 490 g jackets) with a 0.7 cm displacement limit.</li>
+                            <li>Ran shape optimization with an MMA solver to minimize elastic strain energy.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/chart%20(7).jpg" alt="COMSOL Door Hook Shape Optimization — image 2" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>The optimizer introduced bends and forming features that move material away from the center of the shell to increase stiffness.</li>
-                    <li>Re-running the stationary study showed significantly lower stress across the hook, with some hot spots remaining along the symmetry edge.</li>
-                    <li>These are simulation results. The next step is to apply these forms to a new printed hook.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <ul>
+                            <li>The optimizer added bends that move material away from the center of the shell, stiffening it.</li>
+                            <li>Stress dropped significantly across the hook, with a few hot spots left along the symmetry edge.</li>
+                            <li>Next: print a new hook using these forms.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/chart%20(9).jpg" alt="COMSOL Door Hook Shape Optimization — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -96,24 +117,6 @@
                         <a href="../ME159_Final_Project.pdf" target="_blank" rel="noopener" class="btn-primary aside-btn">Open Full Report ↗</a>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/chart%20(9).jpg" alt="COMSOL Door Hook Shape Optimization — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/chart%20(7).jpg" alt="COMSOL Door Hook Shape Optimization — image 2" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 

@@ -57,25 +57,53 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>Replacing an empty toilet paper roll can be difficult for users with limited dexterity. The goal was a system that swaps an empty roll for a new one at the press of a button, while also demonstrating practical home automation concepts.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>Changing a toilet paper roll can be hard for people with limited dexterity. The goal was a machine that swaps in a new roll at the press of a button.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2349.jpg" alt="Automated Toilet Paper Replacement System — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <p>Worked as part of a team to design and fabricate the mechanism, chassis, and controls.</p>
-                <ul>
-                    <li>Designed the chassis using laser-cut plywood with a laser-cut clear acrylic enclosure.</li>
-                    <li>Designed and 3D printed custom brackets and mechanisms for dispensing and positioning replacement rolls.</li>
-                    <li>Programmed an Arduino Uno to coordinate the replacement sequence and synchronize dispensing, unloading, and installation.</li>
-                    <li>Integrated one DC motor, a servo motor, and infrared sensors for automated positioning and roll detection.</li>
-                    <li>Integrated spray-finished housing for a professional prototype appearance.</li>
-                </ul>
+                <div class="project-row">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Built the chassis as a team from laser-cut plywood, with a clear acrylic enclosure.</li>
+                            <li>Designed and 3D printed brackets and mechanisms to dispense and position rolls.</li>
+                            <li>Programmed an Arduino Uno to run the swap sequence with a DC motor, a servo, and infrared sensors.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>Built a prototype that ejects the empty roll and installs a new one with the press of a button.</li>
-                    <li>Completes a full replacement cycle in under five seconds.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Results</h4>
+                        <p>The prototype ejects the empty roll and installs a new one in under five seconds. Our team won the People's Choice Award.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item is-video">
+                            <video src="../assets/images/IMG_1159.mp4" controls muted playsinline preload="metadata"></video>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-text">
+                        <h4>What I'd Do Differently Next Time</h4>
+                        <ul>
+                            <li>Make the machine take up less space.</li>
+                            <li>Build it from a material other than plywood that holds up in a wet bathroom environment.</li>
+                            <li>Make sure other people can't disturb the unloading mechanism.</li>
+                            <li>Add a cover over the switch so no one turns it on by accident.</li>
+                        </ul>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -97,24 +125,6 @@
                         </div>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2349.jpg" alt="Automated Toilet Paper Replacement System — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item is-video">
-                        <video src="../assets/images/IMG_1159.mp4" controls muted playsinline preload="metadata"></video>
-                    </figure>
-                </div>
             </div>
         </section>
 

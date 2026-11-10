@@ -57,25 +57,45 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>C-clamps are often heavy, with a very robust body. Removing mass can improve ergonomics and reduce material cost, but the clamp still has to carry its rated load. Working with Camden Smith, the goal was to minimize the mass of a 6-inch C-clamp body while maintaining at least its original factor of safety.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>With Camden Smith, reduce the mass of a 6-inch ductile iron C-clamp body without lowering its factor of safety (FOS). Less mass means better ergonomics and lower material cost.</p>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <ul>
-                    <li>Used a commercially available ductile cast iron clamp (McMaster-Carr 5033A5) as the baseline, removing the screw and handle to focus on the structural body.</li>
-                    <li>Simplified the threaded region to a cylindrical cut and applied the 2,400 lb (10,675 N) rated load, using loading and fixed constraints based on established C-clamp FEA methods.</li>
-                    <li>Ran a static study in SolidWorks to establish a baseline factor of safety of 1.282.</li>
-                    <li>Ran two iterations of topology optimization to identify where material could be removed, then redesigned the body and re-ran the static study.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Started from a McMaster-Carr 5033A5 clamp and simplified the threads to a cylindrical cut.</li>
+                            <li>Applied the 2,400 lb (10,675 N) rated load in SolidWorks and found a baseline FOS of 1.282.</li>
+                            <li>Ran two rounds of topology optimization, removing material and re-checking stress each time.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/ME108%20Project%202%20-%20Written%20Report%20(2).jpg" alt="C-Clamp FEA &amp; Topology Optimization — image 2" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>Reduced body mass from 2.44 lb to 2.13 lb, a 12.7% reduction.</li>
-                    <li>Increased the factor of safety from 1.282 to 1.329, satisfying the constraint.</li>
-                    <li>Reduced the mass of the middle grip section by 25.8%, from 0.93 lb to 0.69 lb.</li>
-                    <li>These are simulation results. Proposed next steps are an FEA study of hand grip pressure on the handle and physical load testing of a machined clamp.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <ul>
+                            <li>Mass dropped from 2.44 lb to 2.13 lb, a 12.7% reduction.</li>
+                            <li>FOS rose from 1.282 to 1.329.</li>
+                            <li>Next: simulate hand grip pressure on the thinner handle, then machine and load-test a physical clamp.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/ME108%20Project%202%20-%20Written%20Report%20(1)_edited.jpg" alt="C-Clamp FEA &amp; Topology Optimization — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -97,24 +117,6 @@
                         <a href="../ME108%20Project%202%20-%20Written%20Report.pdf" target="_blank" rel="noopener" class="btn-primary aside-btn">Open Full Report ↗</a>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/ME108%20Project%202%20-%20Written%20Report%20(1)_edited.jpg" alt="C-Clamp FEA &amp; Topology Optimization — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/ME108%20Project%202%20-%20Written%20Report%20(2).jpg" alt="C-Clamp FEA &amp; Topology Optimization — image 2" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 

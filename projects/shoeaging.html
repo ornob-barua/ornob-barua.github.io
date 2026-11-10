@@ -57,23 +57,53 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>Aging a shoe through real wear takes thousands of steps. Footwear dynamic impact testing needed an automated way to accelerate that wear and reliably quantify how much a shoe had aged.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>Aging a shoe through real wear takes thousands of steps. Footwear testing needed a rig that could speed this up and count the steps reliably.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/shoeagingimage1.jpg" alt="Automated Shoe Aging Testing Rig — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <p>Designed a mechanical test rig using a concrete-coated spinning shaft and a weighted boom arm to replicate the dynamic skidding forces experienced during foot strikes.</p>
-                <ul>
-                    <li><strong>Chassis &amp; Motor Mount:</strong> Modeled a custom bracket in SolidWorks, manufactured it in a machine shop, and bolted an induction motor to a leveled wooden chassis with shaft couplers.</li>
-                    <li><strong>Sensing &amp; Automation:</strong> Integrated a magnetic reed switch on the shaft with an Arduino Nano to count rotation steps.</li>
-                    <li><strong>Control Housing &amp; Safety:</strong> Built a custom electrical enclosure holding the display screen and motor controllers, with an automated relay kill switch if motion stops for &gt;5 seconds.</li>
-                </ul>
+                <div class="project-row has-media media-below">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Built a concrete-coated spinning shaft and weighted boom arm to recreate the skidding force of a foot strike.</li>
+                            <li>Designed a motor bracket in SolidWorks, machined it, and mounted an induction motor on a leveled wooden chassis.</li>
+                            <li>Counted rotations with a reed switch and an Arduino Nano.</li>
+                            <li>Added an enclosure with a display and a relay kill switch that stops the motor if motion stalls for more than 5 seconds.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/shoeagingimage2.jpg" alt="Automated Shoe Aging Testing Rig — image 2" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/shoeagingimage3.jpg" alt="Automated Shoe Aging Testing Rig — image 3" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>The machine has run for over 5 million cycles on 20+ shoes.</li>
-                    <li>The reed switch sensor quantifies aging by counting rotation steps, and the relay kill switch stops the rig automatically if motion stalls.</li>
-                </ul>
+                <div class="project-row has-media media-below">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <p>The rig has run over 5 million cycles on 20+ shoes.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/shoeagingimage4.jpg" alt="Automated Shoe Aging Testing Rig — image 4" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/shoeagingimage5.jpg" alt="Automated Shoe Aging Testing Rig — image 5" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -93,33 +123,6 @@
                         </div>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/shoeagingimage1.jpg" alt="Automated Shoe Aging Testing Rig — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/shoeagingimage2.jpg" alt="Automated Shoe Aging Testing Rig — image 2" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/shoeagingimage3.jpg" alt="Automated Shoe Aging Testing Rig — image 3" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/shoeagingimage4.jpg" alt="Automated Shoe Aging Testing Rig — image 4" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/shoeagingimage5.jpg" alt="Automated Shoe Aging Testing Rig — image 5" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 

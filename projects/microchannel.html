@@ -57,26 +57,69 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>Microfluidic devices are highly sensitive to fabrication and bonding quality, and small defects can block or alter flow. The goal was to fabricate SiO₂, glass, and PDMS microchannels in the UCSB teaching cleanroom and test whether each could support electroosmotic flow.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>Fabricate SiO₂, glass, and PDMS microchannels in the UCSB teaching cleanroom and test whether they support electroosmotic flow.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2205.jpg" alt="Microfluidic Channel Fabrication — image 1" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <ul>
-                    <li>Performed thermal oxidation, contact photolithography on a Karl Süss MJB3 aligner, BHF and KOH wet etching, PDMS molding, and device bonding.</li>
-                    <li>Calibrated etch times to reach target depths of 4 µm for SiO₂ channels, 2 µm for glass channels, and 3 µm for PDMS molds.</li>
-                    <li>Verified oxide thickness, channel depth, channel width, and sidewall angle using reflectometry, profilometry, and optical microscopy.</li>
-                    <li>Tested bonded devices with current monitoring, using KCl electrolyte solutions and platinum electrodes placed in the channel reservoirs.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li>Used thermal oxidation, contact photolithography, BHF and KOH wet etching, PDMS molding, and bonding.</li>
+                            <li>Checked thickness, depth, width, and sidewall angle with reflectometry, profilometry, and microscopy.</li>
+                            <li>Tested bonded devices with current monitoring, using KCl solutions and platinum electrodes.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2217.jpg" alt="Microfluidic Channel Fabrication — image 2" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2219.jpg" alt="Microfluidic Channel Fabrication — image 3" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>Produced channels close to design targets: SiO₂ depths near 4 µm, glass depths of about 2 µm, and PDMS mold heights near 3 µm.</li>
-                    <li>Channel widths closely matched the mask dimensions, and KOH sidewall angles were close to the theoretical 54.7°.</li>
-                    <li>Current monitoring gave mixed results: most devices showed only pA to nA currents, indicating little to no flow.</li>
-                    <li>One glass channel showed trends close to the expected electroosmotic response. One SiO₂ channel reached µA-level currents, though leakage through the substrate or oxide could not be ruled out.</li>
-                    <li>Identified bonding as one of the largest contributors to reduced yield, and recommended deeper channels and improved bonding for future devices.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <ul>
+                            <li>Reached near-target depths: about 4 µm (SiO₂), 2 µm (glass), and 3 µm (PDMS molds).</li>
+                            <li>Widths matched the mask, and KOH sidewalls were close to the theoretical 54.7°.</li>
+                            <li>Most devices showed little to no flow. One glass channel behaved like electroosmotic flow, and one SiO₂ channel reached µA currents that may have been leakage.</li>
+                            <li>Bonding was one of the biggest causes of lost yield.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2287.jpg" alt="Microfluidic Channel Fabrication — image 4" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/IMG_2329.jpg" alt="Microfluidic Channel Fabrication — image 5" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-text">
+                        <h4>What I'd Do Differently Next Time</h4>
+                        <ul>
+                            <li>Make the channels deeper and wider.</li>
+                            <li>Be more careful with PDMS bonding, and use reversible PDMS bonding for all samples.</li>
+                            <li>Complete the processing in a cleaner environment.</li>
+                            <li>Use material properties to my advantage, and avoid etch calibrations where the bottom material acts as an etch stop.</li>
+                        </ul>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -98,33 +141,6 @@
                         <a href="../Ornob%20Barua%20-%20ME141B%20Lab%20Report%20(2).pdf" target="_blank" rel="noopener" class="btn-primary aside-btn">Open Full Report ↗</a>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2205.jpg" alt="Microfluidic Channel Fabrication — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2217.jpg" alt="Microfluidic Channel Fabrication — image 2" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2219.jpg" alt="Microfluidic Channel Fabrication — image 3" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2287.jpg" alt="Microfluidic Channel Fabrication — image 4" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/IMG_2329.jpg" alt="Microfluidic Channel Fabrication — image 5" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 

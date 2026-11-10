@@ -57,25 +57,57 @@
         <section class="project-section">
             <div class="container project-layout">
                 <article class="project-body">
-                <!-- ===== Write-up: edit or add new <h4>, <p>, and <ul> sections here ===== -->
-                <h4>Problem</h4>
-                <p>Cleanroom users depend on deposition, etch, and lithography tools performing as expected. Each tool needs to be calibrated and measured to keep it running smoothly.</p>
+                <!-- ===== Write-up: each .project-row is one section. Add images inside .project-media (optional). ===== -->
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Problem</h4>
+                        <p>Cleanroom users rely on deposition, etch, and lithography tools performing as expected, so each tool needs regular calibration.</p>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/nanofabimage1.jpg" alt="Nanofabrication Machine Calibrations — image 1" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/nanofabimage2.jpg" alt="Nanofabrication Machine Calibrations — image 2" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Method</h4>
-                <ul>
-                    <li><strong>ALD (Oxford Atomic Layer Deposition):</strong> Calibrated deposition processes for Al₂O₃ and SiO₂ thin films by correlating cycle count with measured thickness using ellipsometry.</li>
-                    <li><strong>Unaxis ICP-PECVD:</strong> Executed calibration runs for HDR SiO₂, LDR SiO₂, SiN, and Low Stress SiN, measuring pre/post particle counts, film stress, and thickness using Tencor Flexus, Filmetrics F50, and KLA Surfscan.</li>
-                    <li><strong>FICP Etch (Fluorine ICP Etcher):</strong> Etched Si and SiO₂ patterns, measuring post-etch depth via step profilometer and analyzing sidewall profiles under SEM.</li>
-                    <li><strong>ASML DUV Photolithography:</strong> Spun, baked, exposed, and developed test wafers, then used SEM metrology to inspect feature pitch and pillar width across wafer regions.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Method</h4>
+                        <ul>
+                            <li><strong>ALD:</strong> Matched cycle count to Al₂O₃ and SiO₂ film thickness using ellipsometry.</li>
+                            <li><strong>ICP-PECVD:</strong> Measured particle counts, film stress, and thickness for four SiO₂ and SiN films.</li>
+                            <li><strong>FICP etch:</strong> Measured Si and SiO₂ etch depth by profilometry and sidewall profiles by SEM.</li>
+                            <li><strong>ASML DUV:</strong> Exposed test wafers and inspected pitch and pillar width with SEM.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/nanofabimage4.png" alt="Nanofabrication Machine Calibrations — image 4" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
 
-                <h4>Results</h4>
-                <ul>
-                    <li>Correlated ALD cycle count with film thickness for Al₂O₃ and SiO₂.</li>
-                    <li>Recorded particle counts, film stress, and thickness for four ICP-PECVD films.</li>
-                    <li>Calculated selectivity and etch rate for FICP Si and SiO₂ etches.</li>
-                    <li>Verified DUV pattern fidelity under SEM, supporting smooth operation for cleanroom users.</li>
-                </ul>
+                <div class="project-row has-media">
+                    <div class="project-text">
+                        <h4>Result / Next Steps</h4>
+                        <ul>
+                            <li>Calculated etch rate and selectivity for FICP Si and SiO₂.</li>
+                            <li>Verified DUV pattern fidelity under SEM.</li>
+                            <li>Kept the tools calibrated for cleanroom users.</li>
+                        </ul>
+                    </div>
+                    <div class="project-media">
+                        <figure class="gallery-item">
+                            <img src="../assets/images/nanofabimage3.jpg" alt="Nanofabrication Machine Calibrations — image 3" loading="lazy">
+                        </figure>
+                        <figure class="gallery-item">
+                            <img src="../assets/images/nanofabimage5.png" alt="Nanofabrication Machine Calibrations — image 5" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
                 </article>
 
                 <aside class="project-aside">
@@ -95,33 +127,6 @@
                         </div>
                     </div>
                 </aside>
-            </div>
-        </section>
-
-        <!-- Project Gallery -->
-        <section class="project-section gallery-section">
-            <div class="container">
-                <div class="eyebrow">Gallery</div>
-                <h2>Photos &amp; Media</h2>
-                <!-- To add media, copy a <figure> block below and point src at a file in assets/images/.
-                     Optional caption: <figcaption>Your caption</figcaption> inside the <figure>. -->
-                <div class="project-gallery">
-                    <figure class="gallery-item">
-                        <img src="../assets/images/nanofabimage1.jpg" alt="Nanofabrication Machine Calibrations — image 1" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/nanofabimage2.jpg" alt="Nanofabrication Machine Calibrations — image 2" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/nanofabimage3.jpg" alt="Nanofabrication Machine Calibrations — image 3" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/nanofabimage4.png" alt="Nanofabrication Machine Calibrations — image 4" loading="lazy">
-                    </figure>
-                    <figure class="gallery-item">
-                        <img src="../assets/images/nanofabimage5.png" alt="Nanofabrication Machine Calibrations — image 5" loading="lazy">
-                    </figure>
-                </div>
             </div>
         </section>
 
